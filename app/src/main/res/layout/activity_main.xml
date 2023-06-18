@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
     <EditText
         android:id="@+id/taskEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Task description" />
+        android:hint="Task description"
+        android:background="#99FFFFFF"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="addTask"
         android:text="Add"
-        android:onClick="addTask" />
+        app:icon="@drawable/add" />
 
     <ListView
         android:id="@+id/taskListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:background="#99FFFFFF"
+        android:textColor="#FFEB3B">
+
+    </ListView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,16 +39,24 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Update"
-            android:onClick="updateTask" />
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:onClick="deleteTask"
+            android:text="Delete"
+            app:icon="@drawable/delete_4219" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Delete"
-            android:onClick="deleteTask" />
+            android:layout_width="163dp"
+            android:layout_height="74dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:onClick="updateTask"
+            android:text="Update"
+            app:icon="@drawable/threecirclingarrows_120597"
+            app:iconPadding="2px" />
 
     </LinearLayout>
 
